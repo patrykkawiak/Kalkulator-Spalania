@@ -1,0 +1,229 @@
+$clr-primary: #bb7330;
+$clr-bg: #121016;
+$radius: 0.5rem;
+
+
+
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+input[type=number] {
+    -moz-appearance: textfield;
+}
+
+
+
+
+body {
+    font-family: "Convergence", sans-serif;
+    font-size: 62.5%;
+    background-color: $clr-bg;
+}
+
+
+
+h1 {
+    padding: 10px;
+    text-align: center;
+    color: $clr-primary;
+    font-size: 1.5rem;
+
+    span {
+        color: white;
+    }
+
+    margin-bottom: 1.5rem;
+}
+
+.box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 2rem 0rem;
+}
+
+.form {
+    position: relative;
+    width: 15rem;
+    height: 3rem;
+    margin: 1.4rem 0rem;
+
+    &__input {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        border: 2px solid white;
+        border-radius: $radius;
+        color: white;
+        outline: none;
+        padding: 1rem;
+        background: none;
+        transition: .3s;
+        font-size: 1rem;
+
+
+        &:focus {
+            border-color: $clr-primary;
+        }
+    }
+
+    &__input:focus~.form__label {
+        color: rgb(255, 255, 255);
+    }
+
+    &__label {
+        position: absolute;
+        left: 1rem;
+        top: -.50rem;
+        padding: 0 0.5rem;
+        font-size: 1rem;
+        color: $clr-primary;
+        cursor: text;
+        background-color: $clr-bg;
+        transition: .3s;
+        letter-spacing: 1px;
+    }
+
+    &__label--number {
+        position: absolute;
+        right: 1rem;
+        top: 52%;
+        transform: translateY(-50%);
+        color: white;
+        font-size: 1.2rem;
+
+    }
+
+
+}
+
+.painter {
+    color: $clr-primary;
+}
+
+.result {
+    color: white;
+    margin-bottom: 2rem;
+    margin-top: 1rem;
+    font-size: 1.2rem;
+    text-align: center;
+    padding: 0 .9em;
+}
+
+button {
+
+    background: transparent;
+    color: white;
+    border: 2px solid $clr-primary;
+    border-radius: $radius;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: transform .3s;
+    font-size: 1.2rem;
+
+}
+
+button:hover {
+    transform: scale(1.1);
+}
+
+
+
+@media (min-width:450px) {
+    h1 {
+        font-size: 2rem;
+    }
+
+    .form {
+        width: 20rem;
+        height: 3.9rem;
+        margin: 2rem 0rem;
+
+        &__input {
+            padding: 1.8rem 1.2rem;
+
+            font-size: 1.6rem;
+
+        }
+
+        &__label {
+            font-size: 1.2rem;
+            top: -.70rem;
+        }
+
+        &__label--number {
+            font-size: 1.6rem;
+            right: 1rem;
+            top: 50%;
+
+        }
+    }
+
+    .result {
+        font-size: 1.5rem;
+        margin-top: 2rem;
+        padding: 15px;
+    }
+
+    button {
+        font-size: 1.6rem;
+    }
+}
+
+@media (min-width:992px) {
+    h1 {
+        font-size: 2.5rem;
+        margin-bottom: 3rem;
+    }
+
+    .form {
+
+        width: 24rem;
+        height: 4rem;
+        margin: 2.3rem 0rem;
+
+        &__input {
+            padding: 1.7rem 1.4rem;
+
+            font-size: 1.7rem;
+
+        }
+
+        &__label {
+            font-size: 1.4rem;
+            top: -1rem;
+        }
+
+        &__label--number {
+            font-size: 1.7rem;
+            right: 1.4rem;
+            top: 50%;
+        }
+    }
+
+    .result {
+        font-size: 1.8rem;
+        margin-top: 2.4rem;
+        padding: 15px;
+    }
+
+    button {
+        font-size: 2.2rem;
+        margin-bottom: 2rem;
+    }
+}

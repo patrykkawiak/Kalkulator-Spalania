@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kalkulator Spalania</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/x-icon" href="img/fuel2.png">
+    <link rel="stylesheet" href="/dist/css/main.min.css">
+
+</head>
+
+<body>
+
+
+    <div class="box">
+        <h1>Kalkulator<span id="heading_span"> Spalania</span></h1>
+        <div class="form">
+            <input type="number" id="distance" class="form__input input_km" autocomplete="off" placeholder=" ">
+            <label class="form__label">Liczba kilometrów</label>
+            <label class="form__label--number">km</label>
+        </div>
+        <div class="form">
+            <input type="number" id="combustion" class="form__input input_burn" autocomplete="off" placeholder=" ">
+            <label for="email" class="form__label">Średnie spalanie</label>
+            <label class="form__label--number">l/100km</label>
+        </div>
+        <div class="form">
+            <input type="number" id="price" class="form__input input_price" autocomplete="off" placeholder=" ">
+            <label for="email" class="form__label">Cena paliwa</label>
+            <label class="form__label--number">zł</label>
+        </div>
+        <div class="form">
+            <input type="number" id="passanger" class="form__input input_pass" autocomplete="off" placeholder=" ">
+            <label for="email" class="form__label">Liczba pasażerów</label>
+            <label class="form__label--number">os</label>
+        </div>
+        <div class="form">
+            <input type="number" id="weight" class="form__input input_weight" autocomplete="off" placeholder=" ">
+            <label for="email" class="form__label">Średnia waga pasażera</label>
+            <label class="form__label--number">kg</label>
+        </div>
+        <div class="result"></div>
+        <button id="btn">Oblicz</button>
+
+    </div>
+    <script src="/dist/js/script.min.js"></script>
+</body>
+
+</html>
